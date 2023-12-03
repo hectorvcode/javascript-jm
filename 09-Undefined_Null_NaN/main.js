@@ -1,12 +1,12 @@
-console.log("Undefined chapter")
+console.log("Undefined chapter");
 
 /** Son valores especiales que indican la ausencia o invalidez de datos en diferentes contextos
- * 
+ *
  * 1. Undefined: es un valor primitivo que se asigna automáticamente a las variables
- * que han sido declaradas pero no inicializadas. 
+ * que han sido declaradas pero no inicializadas.
  * También es el valor de retorno predeterminado para las funciones que no tienen
  * una declaración return
- * 
+ *
  */
 
 let variableUndefined;
