@@ -49,7 +49,7 @@ saludar("Chispita", 3);
 saludar(); //Imprime undefined
 
 //Asignar valores de parámetros por defecto
-//Se igualan los parámetros con el valor que decidamos 
+//Se igualan los parámetros con el valor que decidamos
 
 function restar(x = 5, y = 3) {
   let resultadoResta = x - y;
@@ -60,9 +60,34 @@ let verResultado = restar();
 console.log("El resultado de la resta es: ", verResultado);
 
 /**
- * 
+ * Funciones declaradas
+ * Son la funciones que se definene utilizando la palabra clave function, seguida del nombre de la función
+ * Estas funciones son hoisted, lo que significa que pueden ser usadas antes de la declaración
  */
 
+funcionDeclarada();
+
 function funcionDeclarada() {
-  
+  console.log(
+    "Esta es una función declarada, puede invocarse en cualquier parte de nuestro código, incluso antes de que la función sea declarada"
+  );
 }
+funcionDeclarada();
+
+/**
+ * Funciones expresadas
+ * Son aquellas que se asignan a una variable o se utilizan como parte de una expresión. No son hoisted
+ */
+
+// Función anónima
+
+//Genera error porque la función no es hoisted
+// funcionExpresada(); 
+
+const funcionExpresada = function () {
+  console.log(
+    "Esta es una función expresada, es una función que se le ha asignado como valor a una variable. Si la invocamos antes de su definición JS nos dira 'Cannot access 'funcionExpresada' before initialization'"
+  );
+};
+
+funcionExpresada();
