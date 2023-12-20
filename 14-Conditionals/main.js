@@ -114,17 +114,3 @@ switch (dia) {
     console.log("El día no existe");
     break;
 }
-
-/**
- * Bucles
- * for: ejecuta código repetidas veces en un bucle
- * white: crea un bucle que ser ejecuta mientras se cumpla una condición
- * do while: similar a while pero se ejecuta al menos una vez
- *
- * Salto de ejecución
- * break: termina la ejecución del bucle o sentencia
- * continue: salta una iteración del bucle
- *
- * Manejo de errores
- * try /catch: permite namejar errores en el código
- */
