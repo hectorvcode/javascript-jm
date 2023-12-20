@@ -35,6 +35,11 @@ const jon = {
   edad: 35,
 };
 
+/**
+ * Elije for...in cuando necesites iterar sobre las propiedades de un objeto
+ * Elije for...of cuando necesites iterar sobre los elementos de un objeto
+ */
+
 //for in: permite iterar cada una de las propiedades de un objeto primitivo
 
 for (const propiedad in jon) {
