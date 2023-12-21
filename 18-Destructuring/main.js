@@ -51,11 +51,18 @@ console.log(`Números primos: ${uno}, ${tres}, ${cinco}, ${siete}`);
 const [one, two, three, four] = numerosPrimos;
 console.log(`Con Destructuring: ${one}, ${two}, ${three}, ${four}`);
 
+/**
+ * Es importante que la variable que deseo destructurar tenga el mismo nombre
+ * tanto en el objeto como en la que estoy creando: mainName en objeto y mainName en
+ * la destructuración
+ */
+
 let persona = {
   mainName: "Jon",
   lastName: "Mircha",
   mainAge: 35,
 };
 
+//El orden de asignación no importa porque busca la igual
 let { mainName, lastName, mainAge } = persona;
 console.log(mainName, lastName, mainAge);
