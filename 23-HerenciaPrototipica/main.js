@@ -38,3 +38,5 @@ const snoopy = new Perro("Snoopy", "Macho", "Mediano");
 console.log(snoopy);
 
 snoopy.sonar();
+snoopy.saludar();
+snoopy.ladrar();
