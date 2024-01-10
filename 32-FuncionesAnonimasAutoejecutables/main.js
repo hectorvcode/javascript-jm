@@ -60,7 +60,7 @@ alert("Hola");
   console.log("Versión Clásica");
 })();
 
-// Crockford (JavaScript The God Parts)
+// Crockford (JavaScript The Good Parts)
 (function () {
   console.log("Version Crockford");
 })();
