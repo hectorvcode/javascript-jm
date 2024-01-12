@@ -1,4 +1,4 @@
-console.log("Este es el main");
+console.log("Ejercicios 34");
 
 /**
  * 1. Programa una función que cuente el número de caracteres de una cadena de texto
