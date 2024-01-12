@@ -15,6 +15,15 @@ const reverseStr = (str = "") => {
 
 reverseStr("Hola Mundo");
 
+console.log("----- Mircha -----");
+
+const invertirCadena = (cadena) =>
+  !cadena
+    ? console.warn("No ingresaste una cadena")
+    : console.info(cadena.split("").reverse().join(""));
+
+invertirCadena("Hey World!");
+
 /**
  * 6) Programa una función para contar el número de veces que se repite una palabra en un texto largo,
  * pe. miFuncion("hola mundo adios mundo", "mundo") devolverá 2.
@@ -35,6 +44,27 @@ repeatedPattern("hola mundo, adios mundo, hi mundo, hey mundo", "mundo");
 repeatedPattern("", "mundo");
 repeatedPattern("hola mundo, adios mundo, hi mundo, hey mundo");
 repeatedPattern("hola mundo, adios mundo, hi mundo, hey mundo", "o");
+
+console.log("----- Mircha -----");
+
+const textoEnCadena = (cadena = "", texto = "") => {
+  if (!cadena) return console.warn("No ingresaste un texto");
+  if (!texto) return console.warn("No ingresaste el patrón a buscar");
+
+  let i = 0;
+  contador = 0;
+
+  while (i !== -1) {
+    i = cadena.indexOf(texto, i);
+    if (i !== -1) {
+      i++;
+      contador++;
+    }
+  }
+  return console.info(`La palabra ${texto} se repite ${contador} veces`);
+};
+
+textoEnCadena("Hi world!, bye world, hey world", "world");
 
 /**
  * 7) Programa una función que valide si una palabra o frase dada, es un palíndromo
@@ -58,7 +88,27 @@ const isPalindrome = (str) => {
   }
 };
 
+console.log("----- Mircha -----");
+
 isPalindrome("Salas");
+
+const palindromo = (palabra = "") => {
+  if (!palabra) return console.warn("No ingresaste un texto");
+
+  palabra = palabra.toLowerCase();
+  let alReves = palabra.split("").reverse().join("");
+
+  return palabra === alReves
+    ? console.info(
+        `Si es palíndromo: Palabra original=${palabra}, Palabra al revés=${alReves}`
+      )
+    : console.info(
+        `No es palíndromo: Palabra original=${palabra}, Palabra al revés=${alReves}`
+      );
+};
+
+palindromo("Salas");
+palindromo("Salasi");
 
 /**
  * 8) Programa una función que elimine cierto patrón de caracteres de un texto dado,
@@ -75,4 +125,15 @@ const deletePattern = (str, pattern) => {
   return console.info(result);
 };
 
-deletePattern("xyz1, xyz2, xyz3, xyz4 y xyz5", "x");
+deletePattern("xyz1, xyz2, xyz3, xyz4 y xyz5", ",");
+
+console.log("----- Mircha -----");
+
+const eliminarCaracteres = (texto, patron) =>
+  !texto
+    ? console.warn("No ingresaste texto")
+    : !patron
+    ? console.warn("No ingresaste patron")
+    : console.info(texto.replace(new RegExp(patron, "ig"), ""));
+
+eliminarCaracteres("xyz1, xyz2, xyz3, xyz4 y xyz5", "xyz");
