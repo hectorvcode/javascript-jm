@@ -20,13 +20,31 @@ const isPrime = (num) => {
   return console.info(true);
 };
 
-isPrime(7);
+isPrime(11);
 
 /**
  * 13. Programa una función que determine si un número es par o impar, pe. miFuncion(29) devolverá Impar.
  */
 
+const EvenOdd = (num) => {
+  if (!num) return console.info("Ingresa número a evaluar");
+  num % 2 === 0 ? console.info("Par") : console.info("Impar");
+};
+
+EvenOdd(29);
+
 /**
  * 14. Programa una función para convertir grados Celsius a Fahrenheit y viceversa, pe. miFuncion(0,"C")
  * devolverá 32°F.
  */
+
+const tempConverter = (temp, unit) => {
+  if (temp === undefined) return console.info("Ingresa número a evaluar");
+  unit === "C"
+    ? console.info(`${(temp * 9) / 5 + 32} Grados Farenehit`)
+    : unit === "F"
+    ? console.info(`${((temp - 32) * 5) / 9} Grados Celcius`)
+    : console.warn("Debe ingresar C para Celcius o F para Farenheit");
+};
+
+tempConverter(32, "X");
