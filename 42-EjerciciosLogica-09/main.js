@@ -32,6 +32,8 @@ class Pelicula {
     this.generos = generos;
     this.calificacion = calificacion;
     this.validarIMDB(id);
+    this.validarTitulo(titulo);
+    this.validarDirector(director);
   }
 
   validarCadena(propiedad, valor) {
@@ -60,8 +62,32 @@ class Pelicula {
       }
     }
   }
+
+  validarTitulo(titulo) {
+    if (this.validarCadena("Titulo", titulo)) {
+      this.validarLongitudCadena("Titulo", titulo, 100);
+    }
+  }
+
+  validarDirector(director) {
+    if (this.validarCadena("Director", director)) {
+      this.validarLongitudCadena("Director", director, 50);
+    }
+  }
+
+  validarNumero(propiedad, valor) {
+    if (!valor) return console.warn(`${propiedad} "${valor}" iestá vacop`);
+    if (typeof valor !== "number")
+      return console.error(`${propiedad} "${valor}" ingresado no es un numero`);
+
+    return true;
+  }
 }
 
 const peli = new Pelicula({
   id: "tt1234567",
+  titulo: "Titulo de la Peli",
+  director: "Director de la Peli",
 });
+
+//30:37
