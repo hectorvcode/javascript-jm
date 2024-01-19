@@ -34,6 +34,8 @@ class Pelicula {
     this.validarIMDB(id);
     this.validarTitulo(titulo);
     this.validarDirector(director);
+    this.validarEstreno(estreno);
+    this.validarPais(pais);
   }
 
   validarCadena(propiedad, valor) {
@@ -49,6 +51,32 @@ class Pelicula {
       return console.error(
         `${propiedad} "${valor}" excede el número de caracteres permitidos (${longitud})`
       );
+
+    return true;
+  }
+
+  validarNumero(propiedad, valor) {
+    if (!valor) return console.warn(`${propiedad} "${valor}" está vacío`);
+    if (typeof valor !== "number")
+      return console.error(`${propiedad} "${valor}" ingresado no es un numero`);
+
+    return true;
+  }
+
+  validarArreglo(propiedad, valor) {
+    if (!valor) return console.warn(`${propiedad} "${valor}" está vacío`);
+    if (!(valor instanceof Array))
+      return console.error(
+        `${propiedad} "${valor}" ingresado no es un arreglo`
+      );
+    if (valor.length === 0)
+      return console.error(`${propiedad} "${valor}" no tiene datos`);
+    for (let cadena of valor) {
+      if (typeof cadena !== "string")
+        return console.error(
+          `El valor "${cadena}" ingresado, no es una cadena de texto`
+        );
+    }
 
     return true;
   }
@@ -75,12 +103,16 @@ class Pelicula {
     }
   }
 
-  validarNumero(propiedad, valor) {
-    if (!valor) return console.warn(`${propiedad} "${valor}" iestá vacop`);
-    if (typeof valor !== "number")
-      return console.error(`${propiedad} "${valor}" ingresado no es un numero`);
+  validarEstreno(estreno) {
+    if (this.validarNumero("Año de estreno", estreno))
+      if (!/^([0-9]){4}$/.test(estreno))
+        return console.error(
+          `Año de estreno "${estreno} no es valido, debe ser un numero de 4 digitos`
+        );
+  }
 
-    return true;
+  validarPais(pais) {
+    this.validarArreglo("Pais", pais);
   }
 }
 
@@ -88,6 +120,8 @@ const peli = new Pelicula({
   id: "tt1234567",
   titulo: "Titulo de la Peli",
   director: "Director de la Peli",
+  estreno: 2020,
+  pais: ["Mexico", "Francia"],
 });
 
 //30:37
