@@ -11,6 +11,31 @@ const sqrtArray = (numArray) =>
 sqrtArray([1, 4, 5]);
 
 /**
+ * Mircha
+ */
+
+console.log("---------   Mircha   ---------");
+
+const devolverCuadrado = (arr = undefined) => {
+  if (arr === undefined)
+    return console.warn("No ingresaste un arreglo de números");
+  if (!(arr instanceof Array))
+    return console.error("El valor que ingresaste no es un arreglo");
+  if (arr.length === 0) return console.error("El arreglo está vacío");
+  for (let num of arr) {
+    if (typeof num !== "number") return console.error();
+  }
+
+  const newArr = arr.map((el) => el * el);
+  return console.info({
+    ArregloOriginal: arr,
+    ArregloAlCuadrado: newArr,
+  });
+};
+
+devolverCuadrado([2, 5, 6]);
+
+/**
  * 22) Programa una función que dado un array devuelva el número mas alto
  * y el más bajo de dicho array,
  * pe. miFuncion([1, 4, 5, 99, -60]) devolverá [99, -60].
@@ -25,6 +50,31 @@ const searchLowerHigher = (numArray) => {
 };
 
 searchLowerHigher([1, 4, 5, 99, -60]);
+
+/**
+ * Mircha
+ */
+
+console.log("---------   Mircha   ---------");
+
+const arrayMinMax = (arr = undefined) => {
+  if (arr === undefined)
+    return console.warn("No ingresaste un arreglo de números");
+  if (!(arr instanceof Array))
+    return console.error("El valor que ingresaste no es un arreglo");
+  if (arr.length === 0) return console.error("El arreglo está vacío");
+  for (let num of arr) {
+    if (typeof num !== "number") return console.error();
+  }
+
+  return console.info(
+    `Arreglo original: ${arr}\nValor mayor: ${Math.max(
+      ...arr
+    )},\nValor menor: ${Math.min(...arr)}`
+  );
+};
+
+arrayMinMax([1, 4, 5, 99, -60]);
 
 /**
  * 23) Programa una función que dado un array de números devuelva un objeto
@@ -50,3 +100,27 @@ const splitOddOrEven = (arr) => {
 };
 
 splitOddOrEven([1, 2, 3, 4, 5, 6, 7, 8, 9, 0]);
+
+/**
+ * Mircha
+ */
+
+console.log("---------   Mircha   ---------");
+
+const SepararParesImpares = (arr = undefined) => {
+  if (arr === undefined)
+    return console.warn("No ingresaste un arreglo de números");
+  if (!(arr instanceof Array))
+    return console.error("El valor que ingresaste no es un arreglo");
+  if (arr.length === 0) return console.error("El arreglo está vacío");
+  for (let num of arr) {
+    if (typeof num !== "number") return console.error();
+  }
+
+  return console.info({
+    pares: arr.filter((num) => num % 2 === 0),
+    impares: arr.filter((num) => num % 2 === 1),
+  });
+};
+
+SepararParesImpares([1, 2, 3, 4, 5, 6, 7, 8, 9, 10]);
