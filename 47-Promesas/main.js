@@ -1,5 +1,20 @@
 console.log("Promesas");
 
+/**
+ * En JavaScript una promesa es un objeto que representa la eventual finalización o el fracaso de una operación asíncrona. Proporciona una manera más limpia y estructurada de manejar operaciones asíncronas en comparación con el uso de funciones de retorno llamada callbacks anidadas. Tienen tres estados posibles
+ *
+ * 1. Pending: estado inicial. La promesa está en espera de que se resuelva o sea rechazada
+ * 2. Fullfilled: la operación asíncrona se ha completado con éxito. La promesa se resuelve con un valor
+ * 3. Rejected: la operación asíncrona ha fallado. La promesa se rechaza con una razón (mensaje de error)
+ */
+
+//Sintaxis
+const miPromise = new Promise((resolve, reject) => {
+  //Lógica asíncrona aqui
+  //Si la operación es exitosa, llamamos a resolve con el resultado
+  //Si hay un error llamamos reject con el motivo del error
+});
+
 function cuadradoCallback(value, callback) {
   setTimeout(() => {
     callback(value, value * value);
