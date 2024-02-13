@@ -30,7 +30,26 @@ console.log(document.documentElement.lang);
 document.documentElement.setAttribute("lang", "es-MX");
 console.log(document.documentElement.lang);
 
-const linkDOM = document.querySelector(".link-dom");
-console.log(linkDOM);
+const $linkDOM = document.querySelector(".link-dom");
+console.log("printing linkDOM: ", $linkDOM);
 
 //10:15
+
+$linkDOM.setAttribute("target", "_blank");
+$linkDOM.setAttribute("rel", "noopener");
+$linkDOM.setAttribute("href", "https://www.youtube.com/@jonmircha");
+console.log($linkDOM.hasAttribute("rel"));
+$linkDOM.removeAttribute("rel", "noopener");
+console.log($linkDOM.hasAttribute("rel"));
+
+//Data attributes (data-)
+console.log($linkDOM.getAttribute("data-description"));
+console.log($linkDOM.dataset);
+console.log($linkDOM.dataset.description);
+$linkDOM.setAttribute("data-description", "Modelo de Objeto del Documento");
+console.log($linkDOM.dataset.description);
+$linkDOM.dataset.description = "Suscribete y comparte";
+console.log($linkDOM.dataset.description);
+console.log($linkDOM.hasAttribute("data-id"));
+$linkDOM.removeAttribute("data-id");
+console.log($linkDOM.hasAttribute("data-id"));
