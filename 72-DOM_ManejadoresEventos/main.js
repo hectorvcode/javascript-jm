@@ -16,7 +16,7 @@ $eventoMultiple = document.getElementById("evento-multiple");
 $eventoSemantico.onclick = holaMundo;
 
 $eventoSemantico.onclick = function (e) {
-  alert("Hola Mundo MAnejador de Eventos Semántico");
+  alert("Hola Mundo Manejador de Eventos Semántico");
   console.log(e);
   console.log(event);
 };
