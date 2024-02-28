@@ -6,16 +6,14 @@ console.log("Introducción a JavaScript");
 
 console.log("Ejercicio 1");
 
-function numMayor(arr) {
-  let numeroMayor = arr[0];
-
-  for (let i = 1; i < arr.length; i++) {
-    if (arr[i] > numeroMayor) {
-      numeroMayor = arr[i];
+function findLargestNum(array) {
+  let largestNum = 0;
+  for (let i = 0; i < array.length; i++) {
+    if (array[i] > largestNum) {
+      largestNum = array[i];
     }
   }
-
-  return numeroMayor;
+  return largestNum;
 }
 
-console.log(numMayor([1, 5, 2, 18, 12]));
+console.log(findLargestNum([11, 31, 333, 55, 17]));
