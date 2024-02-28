@@ -9,13 +9,13 @@ console.log("Ejercicio 1");
 function numMayor(arr) {
   let numeroMayor = arr[0];
 
-  for (let i = 0; i < arr.length - 1; i++) {
-    if (i > numeroMayor) {
-      numeroMayor = i;
+  for (let i = 1; i < arr.length; i++) {
+    if (arr[i] > numeroMayor) {
+      numeroMayor = arr[i];
     }
   }
 
   return numeroMayor;
 }
 
-console.log(numMayor([1, 5, 2, 8, 12]));
+console.log(numMayor([1, 5, 2, 18, 12]));
