@@ -33,3 +33,13 @@ function convertToUppercase(arrayOfStrings) {
 }
 
 console.log(convertToUppercase(["hola", "mundo", "programming"]));
+
+/**
+ * 3. Crea una función que tome dos números como parámetros y devuelva el resultado de elevar el primer número a la potencia del segundo número:
+ */
+
+function potencia(n1, n2) {
+  return Math.pow(n1, n2);
+}
+
+console.log(potencia(2, 3));
