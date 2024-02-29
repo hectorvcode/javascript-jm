@@ -1,0 +1,9 @@
+#myButton {
+  margin: 1rem;
+}
+
+#myDiv {
+  margin: 1rem;
+  border: 1px blue solid;
+  padding: 1rem;
+}

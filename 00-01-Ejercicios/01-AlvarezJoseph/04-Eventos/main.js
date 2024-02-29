@@ -9,3 +9,12 @@ $boton.addEventListener(
   "click",
   () => (document.body.style.backgroundColor = "yellow")
 );
+
+/**
+ * 2. Mostrar un mensaje de alerta al pasar el mouse por encima de un elemento
+ */
+
+const $div = document.getElementById("myDiv");
+$div.addEventListener("mouseover", () =>
+  alert("Hey, estas pasando el mouse por encima de mi")
+);
