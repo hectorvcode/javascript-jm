@@ -57,3 +57,13 @@ function sumaElementosArray(arrNums) {
 }
 
 console.log(sumaElementosArray([1, 2, 3, 4, 5])); // Output: 10
+
+/**
+ * 5. Crea una función que tome un objeto como parámetro y devuelva un array con todas las propiedades del objeto
+ */
+
+function propiedadesObjeto(obj) {
+  return Object.getOwnPropertyNames(obj);
+}
+
+console.log(propiedadesObjeto({ a: 1, b: 2, c: 3 })); // Output: ["a", "b", "c"]
