@@ -18,3 +18,13 @@ const $div = document.getElementById("myDiv");
 $div.addEventListener("mouseover", () =>
   alert("Hey, estas pasando el mouse por encima de mi")
 );
+
+/**
+ * 3. Cambiar el contenido de un elemento al presionar una tecla
+ */
+
+const $parrafo = document.getElementById("MyParagraph");
+document.addEventListener(
+  "keydown",
+  (event) => ($parrafo.innerHTML = `Presionaste la tecla ${event.key}`)
+);
