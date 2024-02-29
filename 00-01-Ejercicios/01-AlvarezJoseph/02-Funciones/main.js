@@ -1,4 +1,4 @@
-console.log("Introducción a JavaScript");
+console.log("Funciones");
 
 /**
  * 1. Crea una función que tome un array de números como parámetro y devuelva el número más grande del array
