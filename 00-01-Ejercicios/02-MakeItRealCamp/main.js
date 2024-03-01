@@ -137,7 +137,7 @@ console.log(fizzBuzz(8)); // 8
 
 function contarRango(n1, n2) {
   let contador = 0;
-  for (let i = n1 + 1; i < n2 - 1; i++) {
+  for (let i = n1 + 1; i <= n2 - 1; i++) {
     contador++;
   }
   return contador;
@@ -147,3 +147,22 @@ function contarRango(n1, n2) {
 console.log(contarRango(1, 9)); // 7
 console.log(contarRango(1332, 8743)); // 7410
 console.log(contarRango(5, 6)); // 0
+
+/**
+ * 8. Sumar rango de números
+ * Escribir una función llamada sumarRango que reciba dos argumentos: número inicial y número final. La función debe retornar la suma de los números en ese rango (incluyéndolos).
+ * Nota: puedes asumir que el número inicial va a ser menor o igual que el número final
+ */
+
+function sumarRango(num1, num2) {
+  let acumulador = 0;
+  for (let i = num1; i <= num2; i++) {
+    acumulador += i;
+  }
+  return acumulador;
+}
+
+// código de prueba
+console.log(sumarRango(0, 10)); // 55
+console.log(sumarRango(12, 14)); // 39
+console.log(sumarRango(5, 5)); // 0
