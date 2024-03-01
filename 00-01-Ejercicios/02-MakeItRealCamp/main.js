@@ -135,9 +135,9 @@ console.log(fizzBuzz(8)); // 8
  * Nota: Utiliza un ciclo en tu solución. Puedes asumir que el primier número va a ser menor que el segundo
  */
 
-function contarRango(num1, num2) {
+function contarRango(n1, n2) {
   let contador = 0;
-  for (let i = num1 + 1; i <= num2 - 1; i++) {
+  for (let i = n1 + 1; i < n2 - 1; i++) {
     contador++;
   }
   return contador;
