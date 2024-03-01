@@ -74,3 +74,30 @@ console.log(bmi(65, 1.8)); // "Normal"
 console.log(bmi(72, 1.6)); // "Sobrepeso"
 console.log(bmi(52, 1.75)); //  "Bajo de peso"
 console.log(bmi(135, 1.7)); // "Obeso"
+
+/**
+ * 5. Número de likes
+ * Escribe una función llamada likes que reciba un número y retorne un string utilizando el formato de K para miles y M para millones
+ * Por ejemplo:
+ * 1400 se convierte en 1K
+ * 34567 se convierte en 34K
+ * 7456645 se convierte en 7M
+ * Si el número es menor a 1000 se debe devolver el mismo número como un string
+ */
+
+function likes(num) {
+  if (num < 999) {
+    return num.toString();
+  } else if (num >= 1000 && num < 1000000) {
+    return Math.floor(num / 1000) + "K";
+  } else {
+    return Math.floor(num / 1000000) + "M";
+  }
+}
+
+// código de prueba
+console.log(likes(983)); // "983"
+console.log(likes(1900)); // "1K"
+console.log(likes(54000)); // "54K"
+console.log(likes(120800)); // "120K"
+console.log(likes(25222444)); // "25M"
