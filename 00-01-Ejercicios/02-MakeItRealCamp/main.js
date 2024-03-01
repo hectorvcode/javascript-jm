@@ -128,3 +128,22 @@ console.log(fizzBuzz(6)); // "fizz"
 console.log(fizzBuzz(20)); // "buzz"
 console.log(fizzBuzz(30)); // "fizzbuzz"
 console.log(fizzBuzz(8)); // 8
+
+/**
+ * 7. Contar rango de números
+ * Escribir una función llamada contarRango que reciba dos números y retorne cuántos números que hay entre ellos(excluyéndolos)
+ * Nota: Utiliza un ciclo en tu solución. Puedes asumir que el primier número va a ser menor que el segundo
+ */
+
+function contarRango(num1, num2) {
+  let contador = 0;
+  for (let i = num1 + 1; i <= num2 - 1; i++) {
+    contador++;
+  }
+  return contador;
+}
+
+// código de prueba
+console.log(contarRango(1, 9)); // 7
+console.log(contarRango(1332, 8743)); // 7410
+console.log(contarRango(5, 6)); // 0
